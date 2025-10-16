@@ -25,7 +25,18 @@
       }
     </style>
   </head>
-  <body>
+  <body>  
+   <audio id="bg-music" autoplay loop muted>
+  <source src="Happy Birthday.mp3" type="audio/mpeg">
+</audio>
+
+<script>
+  window.addEventListener("click", function() {
+    const audio = document.getElementById("bg-music");
+    audio.muted = false; // bỏ mute sau khi user click
+    audio.play();
+  });
+</script>
     <h1>Happy Birthday Sara</h1>
     <canvas id="birthday"></canvas>
 
